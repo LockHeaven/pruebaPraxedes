@@ -1,0 +1,49 @@
+<div class="login-wrapper">
+
+    <mat-card class="box">
+        <mat-card-header>
+            <mat-card-title>Nuevo Usuario</mat-card-title>
+        </mat-card-header>
+
+        <form class="form" [formGroup]="miFormulario" (ngSubmit)="register()" autocomplete="off">
+            <mat-card-content>
+                <mat-form-field appearance="outline">
+                    <mat-label>Nombre</mat-label>
+                    <input formControlName="nombre" matInput placeholder="Fabian">
+                    <mat-icon matSuffix>person_outline</mat-icon>
+                </mat-form-field>
+
+                <mat-form-field appearance="outline">
+                    <mat-label>Apellido</mat-label>
+                    <input formControlName="apellido" matInput placeholder="Castro">
+                    <mat-icon matSuffix>person_outline</mat-icon>
+                </mat-form-field>
+
+                <mat-form-field appearance="outline">
+                    <mat-label>Doc. Identidad</mat-label>
+                    <input formControlName="doctoIdent" matInput placeholder="100.565.588">
+                    <mat-icon matSuffix>person_outline</mat-icon>
+                </mat-form-field>
+
+                <mat-form-field appearance="outline">
+                    <mat-label>Username</mat-label>
+                    <input formControlName="username" type="email" matInput placeholder="user@email.com">
+                    <mat-icon matSuffix>person_outline</mat-icon>
+                </mat-form-field>
+
+                <mat-form-field appearance="outline">
+                    <mat-label>Password</mat-label>
+                    <input formControlName="password" type="password" matInput placeholder="Password">
+                    <mat-icon matSuffix>remove_red_eye</mat-icon>
+                </mat-form-field>
+            </mat-card-content>
+
+            <div class="btn-block">
+                <button mat-raised-button color="accent" type="submit" [disabled]="miFormulario.invalid"> Register </button>
+                <span>¿Ya tienes una cuenta?</span>
+                <a routerLink="/auth/login">INGRESA AQUÍ</a>
+            </div>
+        </form>
+    </mat-card>
+
+</div>

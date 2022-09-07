@@ -1,0 +1,31 @@
+<div class="login-wrapper">
+
+    <mat-card class="box">
+        <mat-card-header>
+            <mat-card-title>Log in</mat-card-title>
+        </mat-card-header>
+
+        <form class="form" [formGroup]="miFormulario" (ngSubmit)="login()" autocomplete="off">
+            <mat-card-content>
+                <mat-form-field appearance="outline">
+                    <mat-label>Username</mat-label>
+                    <input matInput formControlName="username" type="email" placeholder="user@email.com">
+                    <mat-icon matSuffix>person_outline</mat-icon>
+                </mat-form-field>
+
+                <mat-form-field appearance="outline">
+                    <mat-label>Password</mat-label>
+                    <input matInput formControlName="password" type="password" placeholder="Password">
+                    <mat-icon matSuffix>remove_red_eye</mat-icon>
+                </mat-form-field>
+            </mat-card-content>
+
+            <div class="btn-block">
+                <button mat-raised-button color="accent" type="submit" [disabled]="miFormulario.invalid"> Log In </button>
+                <span>¿No tienes cuenta?</span>
+                <a routerLink="/auth/register">CREAR UNA AQUÍ</a>
+            </div>
+        </form>
+    </mat-card>
+
+</div>

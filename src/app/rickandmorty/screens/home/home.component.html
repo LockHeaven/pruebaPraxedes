@@ -1,0 +1,35 @@
+<div class="body-page">
+    <mat-toolbar>
+        <span>Rick and Morty <span style="color: red;">APP</span></span>
+
+        <div class="button-container">
+            <button routerLink="./list" mat-mini-fab color="accent" matTooltip="All Characters">
+              <mat-icon>people</mat-icon>
+            </button>
+        </div>
+
+        <div class="button-container">
+            <button routerLink="./episodes" mat-mini-fab color="accent" matTooltip="All Episodes">
+              <mat-icon>movie</mat-icon>
+            </button>
+        </div>
+
+        <div class="button-container">
+            <button routerLink="./favorites" mat-mini-fab color="accent" matTooltip="Your Favorites">
+              <mat-icon>favorite</mat-icon>
+            </button>
+        </div>
+
+        <span class="spacer"></span>
+
+        <span class="mr"> {{ usuario }} </span>
+        <button (click)="logOut()" mat-raised-button color="warn">
+            Logout
+        </button>
+    </mat-toolbar>
+
+
+
+    <router-outlet></router-outlet>
+
+</div>

@@ -1,0 +1,40 @@
+.login-wrapper {
+    .box {
+        
+        mat-card-header {
+            display: flex;
+            justify-content: center;
+        }
+
+        .form {
+            .btn-block {
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+
+                span{
+                    margin-top: 15px;
+                }
+                a{
+                    margin-top: 10px;
+                    color: white;
+                }
+            }
+
+            mat-card-content {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                input {
+                    color: white;
+                }
+
+                mat-icon {
+                    color: white;
+                }
+            }
+        }
+    }
+}

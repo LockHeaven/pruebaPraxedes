@@ -1,0 +1,26 @@
+<div class="page">
+    <div class="form-header">
+        <h1>Listado de Personajes</h1>
+        <mat-divider></mat-divider>
+    </div>
+
+
+    <mat-divider></mat-divider>
+    <br>
+
+    <div *ngIf="flag" class="spinner">
+        <mat-spinner color="accent"></mat-spinner>
+    </div>
+
+
+    <div *ngIf="characters$ | async as characters" fxLayout="row wrap" fxLayout.xs="column" fxLayoutAlign="center"
+        fxLayoutGap="20px">
+        <div fxFlex="20" fxFlex.lg="15" fxFlex.sm="30" *ngFor="let character of characters">
+            <app-character-card [character]="character"></app-character-card>
+        </div>
+    </div>
+
+    <ng-template #noResult>
+        No Results...
+    </ng-template>
+</div>
